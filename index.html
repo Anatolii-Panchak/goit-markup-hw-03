@@ -7,33 +7,45 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link 
+        <link 
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" 
         rel="stylesheet">
+
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+        integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
     <header class="heder">
-        <nav class="heder-navigation">
+        <div class="container heder-container">
+         <nav class="heder-navigation">
             <a class="heder-logo link" href="./index.html">Web<span class="logo-black">Studio</span></a>
             <ul class="list heder-list">
                 <li class="heder-item" ><a class="heder-link link " href="">Студия</a></li>
                 <li class="heder-item" ><a class="heder-link link " href="./portfolio.html">Портфолио</a></li>
                 <li class="heder-item" ><a class="heder-link link " href="">Контакты</a></li>
             </ul>
-        </nav>
-        <ul class="list heder-links">
-            <li class="heder-item"><a class="heder-mail link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-            <li class="heder-item"><a class="heder-tel link" href="tel:+380961111111">+38 096 111 11 11</a></li>  
-        </ul>
-
+         </nav>
+            <div class="heder-connects">
+              <ul class="list heder-links">
+                <li class="heder-item"><a class="heder-mail link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                <li class="heder-item"><a class="heder-tel link" href="tel:+380961111111">+38 096 111 11 11</a></li> 
+              </ul>
+           </div>
+        
+        </div>
    </header>
    <main>
           <section class="hero">
-            <h1 class="hero-title" >Эффективные решения <br/> для вашего бизнеса</h1>
-            <button class="hero-btn" type="submit">Заказать услугу</button>
+              <div class="container hero-container">
+                <h1 class="hero-title" >Эффективные решения <br/> для вашего бизнеса</h1>
+                <button class="hero-btn" type="submit">Заказать услугу</button>
+            </div>
          </section>
       <section class="about">
           <h2></h2>
