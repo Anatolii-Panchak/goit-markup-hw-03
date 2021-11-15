@@ -9,6 +9,10 @@
   --main-logo-color: #2196f3;
   --second-logo-color: #000000;
   --third-logo-color: #ffffff;
+  --main-card-size: 30px;
+  --second-card-size: 50px;
+  --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 p,
@@ -19,6 +23,12 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+img {
+  display: block;
+  min-width: 100%;
+  height: auto;
 }
 
 ul {
@@ -66,7 +76,6 @@ body {
   letter-spacing: 0.03em;
   color: var(--main-logo-color);
   margin-right: 93px;
-
 }
 
 .logo-black {
@@ -79,7 +88,6 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
   inline-size: block;
-  
 }
 
 .heder-container {
@@ -91,11 +99,11 @@ body {
   display: flex;
 }
 
-.heder-list li:last-child {
+.heder-list > li:last-child {
   margin-right: 0;
 }
 
-.heder-list li {
+.heder-list > li {
   margin-right: 50px;
 }
 
@@ -153,9 +161,16 @@ body {
 
 /* ------------HERO--------------------- */
 
+.hero {
+  background-color: #2f303a;
+  text-align: center;
+
+  min-width: 1600px;
+  height: 600px;
+  margin-bottom: 94px;
+}
 
 .hero-title {
-  background-color: #2f303a;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -163,9 +178,8 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--main-title-color);
-  height: 600px;
-  padding-top: 213px;
-  padding-bottom: 280px;
+
+  padding-top: 200px;
 }
 
 .hero-btn {
@@ -177,19 +191,43 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--main-btn-color);
-  background-color:var(--accent-color);
+  background-color: var(--accent-color);
   cursor: pointer;
-  width: 200px;
-  height: 50px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+  border: none;
+  padding: 10px, 32px;
+  margin-top: 30px;
 
+  min-width: 200px;
+  min-height: 50px;
+  border-radius: 4px;
+}
 
 /* --------------------ABOUT----------------- */
 
-.about-title {
+.about {
+  margin-top: 94px;
+  margin-bottom: 94px;
+  /* padding-top: 94px;
+  padding-bottom: 94px; */
+}
+
+.about-container {
+  background-color: var(--main-title-color);
+  padding: 94px, 215px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-list {
+  min-width: 270px;
+  height: 101px;
+}
+
+.about-list:nth-child(-n + 4) {
+  margin-right: 30px;
+}
+
+.about-item .about-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -203,8 +241,38 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
+
+  padding-top: 10px;
+}
+
+.about-text:not(:last-child) {
+  margin-left: 30px;
 }
 /* ------------------WORK----------------------- */
+
+.work {
+  margin-top: 94px;
+  margin-bottom: 94px;
+  /* padding-top: 94px;
+  padding-bottom: 94px; */
+}
+
+.work-container {
+  background-color: var(--main-title-color);
+  padding: 94px, 215px;
+  justify-content: center;
+  min-width: 1200px;
+}
+
+.work-list {
+  display: flex;
+  margin-right: -30px;
+}
+
+.work-list > .work-item {
+  margin-right: 30px;
+  margin-top: 50px;
+}
 
 .work-title {
   font-weight: 700;
@@ -216,6 +284,38 @@ body {
 }
 
 /* ------------------TEAM----------------------- */
+
+.team-list {
+  display: flex;
+  margin-right: -30px;
+}
+
+.team-list > .team-item {
+  margin-right: 30px;
+  margin-top: 50px;
+}
+
+.card {
+  box-shadow: var(--card-shadow);
+  background: #ffffff;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-name-item {
+  margin-top: 30px;
+}
+
+.team-text {
+  margin-top: 10px;
+}
+
+.team {
+  background: #f5f4fa;
+  min-width: 1600px;
+  height: 648px;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
 .team-title {
   font-weight: 700;
@@ -249,6 +349,13 @@ body {
   background-color: #2f303a;
 }
 
+.footer-container {
+  width: 1600px;
+  height: 252px;
+  padding-top: 60px;
+  padding-left: 215px;
+}
+
 .footer-logo {
   font-family: 'Raleway';
   font-weight: 700;
@@ -256,15 +363,25 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--main-logo-color);
+
+  width: 145px;
+  height: 31px;
 }
 
 .logo-white {
   color: var(--third-logo-color);
 }
 
+.footer-list {
+  width: 231px;
+  height: 81px;
+}
+
 .footer-contacts {
   font-family: sans-serif;
   font-style: normal;
+
+  margin-top: 10px;
 }
 
 .footer-map {
