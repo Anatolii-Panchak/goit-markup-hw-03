@@ -109,8 +109,6 @@ body {
 }
 
 .heder-container {
-  padding-top: 32px;
-  padding-bottom: 32px;
   display: flex;
   align-items: center;
 }
@@ -140,7 +138,7 @@ body {
 
 
 .heder-link {
-  padding: 32px, 0;
+  padding: 32px 0;
   font-family: inherit;
   font-weight: 500;
   font-size: 14px;
@@ -186,12 +184,10 @@ body {
 /* ------------HERO--------------------- */
 
 .hero {
+  margin: 0;
   background-color: #2f303a;
   text-align: center;
-}
-
-.hero-conteiner{
-  height: 600px;
+  padding: 200px 0;
 }
 
 .hero-title {
@@ -217,7 +213,7 @@ body {
   background-color: var(--accent-color);
   cursor: pointer;
   border: none;
-  padding: 10px, 32px;
+  padding: 10px 32px;
   margin-top: 30px;
 
   min-width: 200px;
@@ -229,10 +225,14 @@ body {
 
 
 .about-list {
+  display: flex;
+}
+
+.about-item {
   min-width: 270px;
 }
 
-.about-list:nth-child(-n + 4) {
+.about-item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -257,6 +257,7 @@ body {
 .about-text:not(:last-child) {
   margin-left: 30px;
 }
+
 /* ------------------WORK----------------------- */
 
 
@@ -337,8 +338,8 @@ body {
 /* ----------------------FOOTER----------------------- */
 
 .footer {
+  padding: 60px 0;
   background-color: #2f303a;
-  border: 1px solid tomato;
 }
 
 
@@ -415,23 +416,21 @@ body {
 
 .portfolio-list {
   display: flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
   flex-wrap: wrap;
   margin-left: calc(-1 * var(--main-card-size));
-  margin-right: calc(-1 * var(--main-card-size));
+  margin-top: calc(-1 * var(--main-card-size));
 }
 
 
 .portfolio-list > .portfolio-item {
-  flex-basis: calc(100% / 3 -var(--main-card-size)) ;
+  flex-basis: calc(100% / 3 - var(--main-card-size));
   margin-left: var(--main-card-size);
   margin-top: var(--main-card-size);
 }
 
 
 .filter-button {
+  margin-bottom: 50px;
   display: flex;
   justify-content: center;
   
@@ -461,8 +460,6 @@ body {
   font-size: 16px;
   line-height: 26px;
   border-radius: 4px;
-
-  margin-bottom: 34px;
   border: none;
 }
 
@@ -483,6 +480,5 @@ body {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
-
   margin-top: 4px;
 }
